@@ -8,7 +8,7 @@ $VM = Get-AzureRmVM | Out-GridView -Title "Select VM" -OutputMode Single
 Set-AzureRmVMCustomScriptExtension -ResourceGroupName $VM.ResourceGroupName`
     -VMName $VM.Name `
     -Location $VM.Location `
-    -FileUri "https://raw.githubusercontent.com/johndejager/SystemConfiguration/master/SystemConfiguration.ps1","https://github.com/johndejager/SystemConfiguration/blob/master/SystemConfiguration.zip" `
+    -FileUri "https://raw.githubusercontent.com/martinfelts/AzureGpo/SystemConfiguration.ps1","https://github.com/martinfelts/AzureGpo/SystemConfiguration.zip" `
     -Run 'SystemConfiguration.ps1' `
     -Name SystemConfigurationExtension
 
